@@ -21,14 +21,33 @@ html{
 }
 
 .movie-poster-container{
-    height: 85%;
+    height: 95%;
     width: 30%;
     text-align: right;
+    /*add animation*/
+    position: relative;
+    left: -50rem;
+    animation: slide-from-left 3.5s ease-in-out forwards;
 }
+
+@keyframes slide-from-left {
+   80%{left: 1.5rem;}
+   100%{left: 0;}
+}
+
+
+
+
  .movie-poster{
     height: 100%;
     border-radius: 5px;
     margin-right: 2rem;
+    transition: all 1s;
+ }
+
+ .movie-poster:hover {
+   transform: scale(1.1);
+   box-shadow: 8px 8px 8px -4px rgb(28, 25, 25);
  }
 
  .movie-info-container{
@@ -38,9 +57,27 @@ html{
     padding-top: 2rem;
  }
 
+ .movie-info-container > *:not(.movie-info-title){
+   opacity: 0;
+   animation: fade-in 3.5s ease-in-out forwards;
+   animation-delay: 1s;
+ }
+
+ @keyframes fade-in{
+   100% {opacity: 1;}
+ }
+
  .movie-info-title{
     text-transform: capitalize;
     margin-top: 2rem;
+    /*add animation*/
+    transform: translateY(-150px);
+    animation: slide-from-top 3.5s ease-in-out forwards;
+ }
+
+ @keyframes slide-from-top {
+   80% {transform: translateY(20px);}
+   100% {transform: translateY(0);}
  }
 
  .movie-genres{
@@ -114,6 +151,44 @@ html{
     font-weight: 700;
  }
 
+ 
+ .modal {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(69, 111, 123, 0.656);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: rgb(166, 194, 211);
+    margin: 5% auto;
+    padding: 5rem;
+    width: 600px;
+    height: 600px;
+    animation: zoom-in 1s;
+}
+
+@keyframes zoom-in {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+.closeBtn {
+    float: right;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.movie-poster-modal{
+    width: 300px;
+}
+
+
  footer{
     margin-top: 2rem;
     text-align: center;
@@ -133,3 +208,8 @@ html{
     font-size: 1.5rem;
     color: #777;
  }
+
+ .movie-poster {
+   width: 300px;
+   cursor: pointer;
+}
