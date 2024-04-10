@@ -152,7 +152,7 @@ html{
  }
 
  
- .modal {
+ /*.modal {
     display: none;
     position: fixed;
     height: 100%;
@@ -186,7 +186,7 @@ html{
 
 .movie-poster-modal{
     width: 300px;
-}
+}*/
 
 
  footer{
@@ -209,7 +209,7 @@ html{
     color: #777;
  }
 
- .movie-poster {
+ /*.movie-poster {
    width: 300px;
    cursor: pointer;
-}
+}*/

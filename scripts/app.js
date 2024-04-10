@@ -1,4 +1,4 @@
-//select movie poster original img
+/*//select movie poster original img
 let moviePoster = document.querySelector('.movie-poster');
 
 //select modal window layer
@@ -26,4 +26,4 @@ window.addEventListener('click', (event)=>{
     modal.style.display = 'none';
     }
 
-});
+});*/
